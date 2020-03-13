@@ -53,7 +53,6 @@ describe('createStore()', () => {
 
     const sub1 = jest.fn();
     const sub2 = jest.fn();
-    const sub3 = jest.fn();
 
     store.subscribe(sub1, filterNeverMatches);
     store.subscribe(sub2, filterNeverMatches);
