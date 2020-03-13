@@ -1,8 +1,5 @@
 export function simpleEquals(first, second) {
-  for (const key in first) {
-    if (first[key] !== second[key]) return false;
-  }
-  return true;
+  return Object.keys(first).every(key => Object.is(first[key], second[key]));
 }
 
 export function select(keys) {
