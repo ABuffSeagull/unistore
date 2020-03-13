@@ -1,60 +1,39 @@
 {
-  "name": "@abuffseagull/unistore",
-  "version": "4.0.0",
-  "description": "Dead simple centralized state container (store) with preact and react bindings.",
-  "source": "src/index.js",
-  "scripts": {
-    "lint": "eslint src test",
-    "test": "jest",
-    "version": "npx @pika/pack"
-  },
-  "files": [
-    "src/index.js",
-    "src/util.js"
-  ],
-  "keywords": [
-    "preact",
-    "component",
-    "state machine",
-    "redux"
-  ],
-  "repository": "abuffseagull/unistore",
-  "author": "ABuffSeagull <reecevanatta@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@pika/pack": "^0.5.0",
-    "@pika/plugin-build-web": "^0.8.1",
-    "@pika/plugin-standard-pkg": "^0.8.1",
-    "babel-jest": "^25.1.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
-    "eslint": "^6.8.0",
-    "eslint-config-healthier": "^3.2.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-formatter-kakoune": "^1.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.7.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "jest": "^25.1.0",
-    "np": "^6.0.0",
-    "preact": "^10.3.1",
-    "prettier": "^1.19.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
-  },
-  "dependencies": {
-    "@babel/preset-react": "^7.8.3"
-  },
-  "@pika/pack": {
-    "pipeline": [
-      [
-        "@pika/plugin-standard-pkg"
-      ],
-      [
-        "@pika/plugin-build-web"
-      ]
-    ]
-  }
+	"name": "@abuffseagull/unistore",
+	"version": "4.0.0",
+	"description": "Dead simple centralized state container (store) with preact and react bindings.",
+	"source": "src/index.js",
+	"scripts": {
+		"format": "prettier --write src/** test/**/*",
+		"lint": "healthier",
+		"test": "jest",
+		"version": "npx @pika/pack"
+	},
+	"files": ["src/index.js", "src/util.js"],
+	"keywords": ["preact", "component", "state machine", "redux"],
+	"repository": "abuffseagull/unistore",
+	"author": "ABuffSeagull <reecevanatta@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@pika/pack": "^0.5.0",
+		"@pika/plugin-build-web": "^0.9.2",
+		"@pika/plugin-standard-pkg": "^0.9.2",
+		"healthier": "^3.2.0",
+		"np": "^6.0.0",
+		"preact": "^10.3.2",
+		"prettier": "^1.19.1",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"typescript": "^3.7.5"
+	},
+	"@pika/pack": {
+		"pipeline": [["@pika/plugin-standard-pkg"], ["@pika/plugin-build-web"]]
+	},
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"node": true,
+			"jest": true
+		}
+	}
 }
