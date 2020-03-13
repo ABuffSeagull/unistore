@@ -28,12 +28,5 @@
 	},
 	"@pika/pack": {
 		"pipeline": [["@pika/plugin-standard-pkg"], ["@pika/plugin-build-web"]]
-	},
-	"eslintConfig": {
-		"env": {
-			"browser": true,
-			"node": true,
-			"jest": true
-		}
 	}
 }
